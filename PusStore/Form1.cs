@@ -1,10 +1,40 @@
 namespace PusStore
 {
-    public partial class Form1 : Form
+    public partial class PusStore : Form
     {
-        public Form1()
+        public PusStore()
         {
             InitializeComponent();
+        }   
+            
+        
+        private void íàñòğîéêèToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void áèáëèîòåêàToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ğàçğåøåíèåToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void äîáàâèòüToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form2 secondForm = new Form2();
+
+            secondForm.Show();
+
+        }
+
     }
 }
