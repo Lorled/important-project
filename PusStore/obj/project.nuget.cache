@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "TV9EhxkHEpLBk/YtZyeOGn/XoMhCSN6x7CDmkqxuh5Ypq9QkobvKUj3pyvypLBE6cGfvWtI6FXVxlOh602xKNg==",
+  "dgSpecHash": "GzZzAH5kjnTl4j8ybCYdhdC9K4/X7iwYF0x4voHd/LeGL9VNtfM2ZxgytjHXTiIrEA9y6uQjom1ZaTRMdGxb6A==",
   "success": true,
   "projectFilePath": "D:\\important-project\\PusStore\\PusStore.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Madte\\.nuget\\packages\\octokit\\8.0.1\\octokit.8.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

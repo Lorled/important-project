@@ -30,7 +30,6 @@
         {
             menuStrip1 = new MenuStrip();
             библиотекаToolStripMenuItem = new ToolStripMenuItem();
-            приложениеВБиблиотекеToolStripMenuItem = new ToolStripMenuItem();
             добавитьToolStripMenuItem = new ToolStripMenuItem();
             настройкиToolStripMenuItem = new ToolStripMenuItem();
             разрешениеToolStripMenuItem = new ToolStripMenuItem();
@@ -57,7 +56,7 @@
             // библиотекаToolStripMenuItem
             // 
             библиотекаToolStripMenuItem.BackColor = Color.Transparent;
-            библиотекаToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { приложениеВБиблиотекеToolStripMenuItem, добавитьToolStripMenuItem });
+            библиотекаToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { добавитьToolStripMenuItem });
             библиотекаToolStripMenuItem.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             библиотекаToolStripMenuItem.ForeColor = Color.IndianRed;
             библиотекаToolStripMenuItem.ImageTransparentColor = Color.White;
@@ -67,12 +66,6 @@
             библиотекаToolStripMenuItem.Text = "Приложения";
             библиотекаToolStripMenuItem.TextDirection = ToolStripTextDirection.Horizontal;
             библиотекаToolStripMenuItem.Click += библиотекаToolStripMenuItem_Click;
-            // 
-            // приложениеВБиблиотекеToolStripMenuItem
-            // 
-            приложениеВБиблиотекеToolStripMenuItem.Name = "приложениеВБиблиотекеToolStripMenuItem";
-            приложениеВБиблиотекеToolStripMenuItem.Size = new Size(180, 24);
-            приложениеВБиблиотекеToolStripMenuItem.Text = "Библиотека";
             // 
             // добавитьToolStripMenuItem
             // 
@@ -126,7 +119,6 @@
             ScreenResolution.Name = "ScreenResolution";
             ScreenResolution.Size = new Size(121, 23);
             ScreenResolution.TabIndex = 3;
-            ScreenResolution.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // PusStore
             // 
@@ -151,7 +143,6 @@
         private ToolStripMenuItem библиотекаToolStripMenuItem;
         private ToolStripMenuItem настройкиToolStripMenuItem;
         private ToolStripMenuItem разрешениеToolStripMenuItem;
-        private ToolStripMenuItem приложениеВБиблиотекеToolStripMenuItem;
         private ToolStripMenuItem добавитьToolStripMenuItem;
         private Button button1;
         private Button button2;

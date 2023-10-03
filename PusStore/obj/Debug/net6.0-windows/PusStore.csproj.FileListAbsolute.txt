@@ -16,3 +16,4 @@ D:\important-project\PusStore\obj\Debug\net6.0-windows\ref\PusStore.dll
 D:\important-project\PusStore\obj\Debug\net6.0-windows\PusStore.PusStore.resources
 D:\important-project\PusStore\obj\Debug\net6.0-windows\PusStore.Properties.Resources.resources
 D:\important-project\PusStore\obj\Debug\net6.0-windows\PusStore.Form2.resources
+D:\important-project\PusStore\obj\Debug\net6.0-windows\PusStore.csproj.AssemblyReference.cache

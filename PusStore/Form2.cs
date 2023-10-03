@@ -4,9 +4,12 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using Octokit;
 
 namespace PusStore
 {
@@ -23,6 +26,52 @@ namespace PusStore
         }
 
         private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private async void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string repositoryUrl = textBox1.Text; // Получите URL репозитория из TextBox
+
+                // Создайте и настройте FolderBrowserDialog
+                using (FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog())
+                {
+                    folderBrowserDialog.Description = "Выберите папку для загрузки проекта";
+                    folderBrowserDialog.ShowNewFolderButton = true;
+
+                    // Если пользователь выбрал папку и нажал "OK"
+                    if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        string downloadPath = folderBrowserDialog.SelectedPath;
+
+                        GitHubClient client = new GitHubClient(new ProductHeaderValue("MyApp")); // Создайте клиент GitHub
+                        string[] parts = repositoryUrl.Split('/'); // Разбейте URL репозитория
+                        string owner = parts[parts.Length - 2]; // Имя владельца репозитория
+                        string repoName = parts[parts.Length - 1].Replace(".git", ""); // Имя репозитория
+
+                        // Получите информацию о репозитории
+                        Repository repository = await client.Repository.Get(owner, repoName);
+
+                        // Скачайте проект (архив) из GitHub
+                        using (WebClient webClient = new WebClient())
+                        {
+                            webClient.DownloadFile(repository.ArchiveUrl, Path.Combine(downloadPath, repoName + ".zip"));
+                        }
+
+                        MessageBox.Show("Проект успешно скачан.", "Успех");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Произошла ошибка: " + ex.Message, "Ошибка");
+            }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }

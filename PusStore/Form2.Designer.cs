@@ -32,6 +32,7 @@
             button1 = new Button();
             button2 = new Button();
             label1 = new Label();
+            folderBrowserDialog1 = new FolderBrowserDialog();
             SuspendLayout();
             // 
             // textBox1
@@ -40,6 +41,7 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(235, 23);
             textBox1.TabIndex = 0;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // button1
             // 
@@ -58,6 +60,7 @@
             button2.TabIndex = 2;
             button2.Text = "Далее\r\n";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // label1
             // 
@@ -94,5 +97,6 @@
         private Button button1;
         private Button button2;
         private Label label1;
+        private FolderBrowserDialog folderBrowserDialog1;
     }
 }
