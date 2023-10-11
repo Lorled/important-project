@@ -59,5 +59,15 @@ namespace PusStore.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CCI28072023_0002 {
+            get {
+                object obj = ResourceManager.GetObject("CCI28072023_0002", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

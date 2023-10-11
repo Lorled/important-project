@@ -10,6 +10,9 @@
 
   <ItemGroup>
     <PackageReference Include="Octokit" Version="8.0.1" />
+    <PackageReference Include="Octokit.Reactive" Version="8.0.1" />
+    <PackageReference Include="Octokit.Webhooks" Version="2.0.3" />
+    <PackageReference Include="Octokit.Webhooks.AspNetCore" Version="2.0.3" />
   </ItemGroup>
 
   <ItemGroup>

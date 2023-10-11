@@ -2,6 +2,38 @@
   "version": 3,
   "targets": {
     "net6.0-windows7.0": {
+      "Macross.Json.Extensions/3.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Macross.Json.Extensions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Macross.Json.Extensions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.Extensions.Primitives/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/Microsoft.Extensions.Primitives.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.Extensions.Primitives.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        }
+      },
       "Octokit/8.0.1": {
         "type": "package",
         "compile": {
@@ -14,10 +46,139 @@
             "related": ".xml"
           }
         }
+      },
+      "Octokit.Reactive/8.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Octokit": "8.0.1",
+          "System.Reactive": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Octokit.Reactive.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Octokit.Reactive.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Octokit.Webhooks/2.0.3": {
+        "type": "package",
+        "dependencies": {
+          "Macross.Json.Extensions": "3.0.0",
+          "Microsoft.Extensions.Primitives": "7.0.0"
+        },
+        "compile": {
+          "lib/net6.0/Octokit.Webhooks.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Octokit.Webhooks.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Octokit.Webhooks.AspNetCore/2.0.3": {
+        "type": "package",
+        "dependencies": {
+          "Octokit.Webhooks": "2.0.3"
+        },
+        "compile": {
+          "lib/net6.0/Octokit.Webhooks.AspNetCore.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Octokit.Webhooks.AspNetCore.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "System.Reactive/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/System.Reactive.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/System.Reactive.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/System.Runtime.CompilerServices.Unsafe.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/System.Runtime.CompilerServices.Unsafe.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
+        }
       }
     }
   },
   "libraries": {
+    "Macross.Json.Extensions/3.0.0": {
+      "sha512": "AkNshs6dopj8FXsmkkJxvLivN2SyDJQDbjcds5lo9+Y6L4zpcoXdmzXQ3VVN+AIWQr0CTD5A7vkuHGAr2aypZg==",
+      "type": "package",
+      "path": "macross.json.extensions/3.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net6.0/Macross.Json.Extensions.dll",
+        "lib/net6.0/Macross.Json.Extensions.xml",
+        "lib/netstandard2.0/Macross.Json.Extensions.dll",
+        "lib/netstandard2.0/Macross.Json.Extensions.xml",
+        "lib/netstandard2.1/Macross.Json.Extensions.dll",
+        "lib/netstandard2.1/Macross.Json.Extensions.xml",
+        "macross.json.extensions.3.0.0.nupkg.sha512",
+        "macross.json.extensions.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.Primitives/7.0.0": {
+      "sha512": "um1KU5kxcRp3CNuI8o/GrZtD4AIOXDk+RLsytjZ9QPok3ttLUelLKpilVPuaFT3TFjOhSibUAso0odbOaCDj3Q==",
+      "type": "package",
+      "path": "microsoft.extensions.primitives/7.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/Microsoft.Extensions.Primitives.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.Primitives.targets",
+        "lib/net462/Microsoft.Extensions.Primitives.dll",
+        "lib/net462/Microsoft.Extensions.Primitives.xml",
+        "lib/net6.0/Microsoft.Extensions.Primitives.dll",
+        "lib/net6.0/Microsoft.Extensions.Primitives.xml",
+        "lib/net7.0/Microsoft.Extensions.Primitives.dll",
+        "lib/net7.0/Microsoft.Extensions.Primitives.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Primitives.xml",
+        "microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+        "microsoft.extensions.primitives.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "Octokit/8.0.1": {
       "sha512": "PHJBNsKpciw7oH93k2ym1eL3UjIU1KJl9qU15SA0PwIvjmhBnmw+TVJhrQKCBeV+18CL6xsjLIia7718406KOg==",
       "type": "package",
@@ -31,11 +192,113 @@
         "octokit.nuspec",
         "octokit.png"
       ]
+    },
+    "Octokit.Reactive/8.0.1": {
+      "sha512": "dXSe2eMGFQ1OrU3IyqyjBbrRDnOOiufn7+b5ahbAuUVt79heCZC3wkcq/D9ZnFLYTEtj/i5ZxfywvVCAD1Os5g==",
+      "type": "package",
+      "path": "octokit.reactive/8.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Octokit.Reactive.dll",
+        "lib/netstandard2.0/Octokit.Reactive.xml",
+        "octokit.png",
+        "octokit.reactive.8.0.1.nupkg.sha512",
+        "octokit.reactive.nuspec"
+      ]
+    },
+    "Octokit.Webhooks/2.0.3": {
+      "sha512": "a2BbLLhsTKzTjns3BNUhDcI2cHYzpJ4IbiUUCV9pcuVwC6PvIuMq7vUYIN8m9jlkB0D6ZP+/VWthEOQQD8lT3g==",
+      "type": "package",
+      "path": "octokit.webhooks/2.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "README.md",
+        "lib/net6.0/Octokit.Webhooks.dll",
+        "lib/net6.0/Octokit.Webhooks.pdb",
+        "lib/net6.0/Octokit.Webhooks.xml",
+        "octokit.webhooks.2.0.3.nupkg.sha512",
+        "octokit.webhooks.nuspec"
+      ]
+    },
+    "Octokit.Webhooks.AspNetCore/2.0.3": {
+      "sha512": "CBHz2meZm8XUT3/gJokmXVxUW/Af3rWOrZmZmigRPgOUlzVLo+SKbKOS94I+ilEMinr4por5GlZCw6G8/HYgtA==",
+      "type": "package",
+      "path": "octokit.webhooks.aspnetcore/2.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "README.md",
+        "lib/net6.0/Octokit.Webhooks.AspNetCore.dll",
+        "lib/net6.0/Octokit.Webhooks.AspNetCore.pdb",
+        "lib/net6.0/Octokit.Webhooks.AspNetCore.xml",
+        "octokit.webhooks.aspnetcore.2.0.3.nupkg.sha512",
+        "octokit.webhooks.aspnetcore.nuspec"
+      ]
+    },
+    "System.Reactive/6.0.0": {
+      "sha512": "31kfaW4ZupZzPsI5PVe77VhnvFF55qgma7KZr/E0iFTs6fmdhhG8j0mgEx620iLTey1EynOkEfnyTjtNEpJzGw==",
+      "type": "package",
+      "path": "system.reactive/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/net6.0-windows10.0.19041/_._",
+        "build/net6.0/_._",
+        "buildTransitive/net6.0-windows10.0.19041/_._",
+        "buildTransitive/net6.0/_._",
+        "icon.png",
+        "lib/net472/System.Reactive.dll",
+        "lib/net472/System.Reactive.xml",
+        "lib/net6.0-windows10.0.19041/System.Reactive.dll",
+        "lib/net6.0-windows10.0.19041/System.Reactive.xml",
+        "lib/net6.0/System.Reactive.dll",
+        "lib/net6.0/System.Reactive.xml",
+        "lib/netstandard2.0/System.Reactive.dll",
+        "lib/netstandard2.0/System.Reactive.xml",
+        "lib/uap10.0.18362/System.Reactive.dll",
+        "lib/uap10.0.18362/System.Reactive.pri",
+        "lib/uap10.0.18362/System.Reactive.xml",
+        "readme.md",
+        "system.reactive.6.0.0.nupkg.sha512",
+        "system.reactive.nuspec"
+      ]
+    },
+    "System.Runtime.CompilerServices.Unsafe/6.0.0": {
+      "sha512": "/iUeP3tq1S0XdNNoMz5C9twLSrM/TH+qElHkXWaPvuNOt+99G75NrV0OS2EqHx5wMN7popYjpc8oTjC1y16DLg==",
+      "type": "package",
+      "path": "system.runtime.compilerservices.unsafe/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.targets",
+        "buildTransitive/netcoreapp3.1/_._",
+        "lib/net461/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/net461/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/net6.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/net6.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netcoreapp3.1/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netcoreapp3.1/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+        "system.runtime.compilerservices.unsafe.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
-      "Octokit >= 8.0.1"
+      "Octokit >= 8.0.1",
+      "Octokit.Reactive >= 8.0.1",
+      "Octokit.Webhooks >= 2.0.3",
+      "Octokit.Webhooks.AspNetCore >= 2.0.3"
     ]
   },
   "packageFolders": {
@@ -85,6 +348,18 @@
           "Octokit": {
             "target": "Package",
             "version": "[8.0.1, )"
+          },
+          "Octokit.Reactive": {
+            "target": "Package",
+            "version": "[8.0.1, )"
+          },
+          "Octokit.Webhooks": {
+            "target": "Package",
+            "version": "[2.0.3, )"
+          },
+          "Octokit.Webhooks.AspNetCore": {
+            "target": "Package",
+            "version": "[2.0.3, )"
           }
         },
         "imports": [

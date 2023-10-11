@@ -17,3 +17,11 @@ D:\important-project\PusStore\obj\Debug\net6.0-windows\PusStore.PusStore.resourc
 D:\important-project\PusStore\obj\Debug\net6.0-windows\PusStore.Properties.Resources.resources
 D:\important-project\PusStore\obj\Debug\net6.0-windows\PusStore.Form2.resources
 D:\important-project\PusStore\obj\Debug\net6.0-windows\PusStore.csproj.AssemblyReference.cache
+D:\important-project\PusStore\bin\Debug\net6.0-windows\Macross.Json.Extensions.dll
+D:\important-project\PusStore\bin\Debug\net6.0-windows\Microsoft.Extensions.Primitives.dll
+D:\important-project\PusStore\bin\Debug\net6.0-windows\Octokit.dll
+D:\important-project\PusStore\bin\Debug\net6.0-windows\Octokit.Reactive.dll
+D:\important-project\PusStore\bin\Debug\net6.0-windows\Octokit.Webhooks.dll
+D:\important-project\PusStore\bin\Debug\net6.0-windows\Octokit.Webhooks.AspNetCore.dll
+D:\important-project\PusStore\bin\Debug\net6.0-windows\System.Reactive.dll
+D:\important-project\PusStore\obj\Debug\net6.0-windows\PusStore.csproj.CopyComplete

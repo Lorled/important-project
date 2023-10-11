@@ -55,11 +55,7 @@ namespace PusStore
                         // Получите информацию о репозитории
                         Repository repository = await client.Repository.Get(owner, repoName);
 
-                        // Скачайте проект (архив) из GitHub
-                        using (WebClient webClient = new WebClient())
-                        {
-                            webClient.DownloadFile(repository.ArchiveUrl, Path.Combine(downloadPath, repoName + ".zip"));
-                        }
+                        // Скачайте проект (архив) из GitHu
 
                         MessageBox.Show("Проект успешно скачан.", "Успех");
                     }

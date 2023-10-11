@@ -28,15 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             menuStrip1 = new MenuStrip();
             библиотекаToolStripMenuItem = new ToolStripMenuItem();
             добавитьToolStripMenuItem = new ToolStripMenuItem();
+            ссылкойToolStripMenuItem = new ToolStripMenuItem();
+            изПроводникаToolStripMenuItem = new ToolStripMenuItem();
             настройкиToolStripMenuItem = new ToolStripMenuItem();
             разрешениеToolStripMenuItem = new ToolStripMenuItem();
-            button1 = new Button();
-            button2 = new Button();
-            ScreenResolution = new ComboBox();
+            contextMenuStrip1 = new ContextMenuStrip(components);
+            Library = new FlowLayoutPanel();
+            Add = new Button();
             menuStrip1.SuspendLayout();
+            Library.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
@@ -69,10 +73,23 @@
             // 
             // добавитьToolStripMenuItem
             // 
+            добавитьToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { ссылкойToolStripMenuItem, изПроводникаToolStripMenuItem });
             добавитьToolStripMenuItem.Name = "добавитьToolStripMenuItem";
-            добавитьToolStripMenuItem.Size = new Size(180, 24);
+            добавитьToolStripMenuItem.Size = new Size(176, 24);
             добавитьToolStripMenuItem.Text = "Добавить...";
             добавитьToolStripMenuItem.Click += добавитьToolStripMenuItem_Click;
+            // 
+            // ссылкойToolStripMenuItem
+            // 
+            ссылкойToolStripMenuItem.Name = "ссылкойToolStripMenuItem";
+            ссылкойToolStripMenuItem.Size = new Size(205, 24);
+            ссылкойToolStripMenuItem.Text = "Ссылкой";
+            // 
+            // изПроводникаToolStripMenuItem
+            // 
+            изПроводникаToolStripMenuItem.Name = "изПроводникаToolStripMenuItem";
+            изПроводникаToolStripMenuItem.Size = new Size(205, 24);
+            изПроводникаToolStripMenuItem.Text = "Из проводника";
             // 
             // настройкиToolStripMenuItem
             // 
@@ -94,46 +111,51 @@
             разрешениеToolStripMenuItem.Text = "Разрешение ";
             разрешениеToolStripMenuItem.Click += разрешениеToolStripMenuItem_Click;
             // 
-            // button1
+            // contextMenuStrip1
             // 
-            button1.Location = new Point(401, 328);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 1;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            contextMenuStrip1.Name = "contextMenuStrip1";
+            contextMenuStrip1.Size = new Size(61, 4);
             // 
-            // button2
+            // Library
             // 
-            button2.Location = new Point(241, 330);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 2;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
+            Library.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            Library.Controls.Add(Add);
+            Library.Location = new Point(12, 64);
+            Library.Name = "Library";
+            Library.Size = new Size(44, 386);
+            Library.TabIndex = 1;
+            Library.Paint += Library_Paint;
             // 
-            // ScreenResolution
+            // Add
             // 
-            ScreenResolution.FormattingEnabled = true;
-            ScreenResolution.Location = new Point(298, 257);
-            ScreenResolution.Name = "ScreenResolution";
-            ScreenResolution.Size = new Size(121, 23);
-            ScreenResolution.TabIndex = 3;
+            Add.BackColor = Color.Transparent;
+            Add.BackgroundImageLayout = ImageLayout.None;
+            Add.Cursor = Cursors.Hand;
+            Add.FlatAppearance.BorderSize = 0;
+            Add.FlatStyle = FlatStyle.Flat;
+            Add.Image = Properties.Resources.CCI28072023_0002;
+            Add.Location = new Point(0, 0);
+            Add.Margin = new Padding(0, 0, 0, 3);
+            Add.Name = "Add";
+            Add.Padding = new Padding(3);
+            Add.Size = new Size(40, 40);
+            Add.TabIndex = 2;
+            Add.UseVisualStyleBackColor = false;
+            Add.Click += Add_Click;
             // 
             // PusStore
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(ScreenResolution);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(Library);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
             Name = "PusStore";
             Text = "Form1";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
+            Library.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -144,8 +166,10 @@
         private ToolStripMenuItem настройкиToolStripMenuItem;
         private ToolStripMenuItem разрешениеToolStripMenuItem;
         private ToolStripMenuItem добавитьToolStripMenuItem;
-        private Button button1;
-        private Button button2;
-        private ComboBox ScreenResolution;
+        private ToolStripMenuItem ссылкойToolStripMenuItem;
+        private ToolStripMenuItem изПроводникаToolStripMenuItem;
+        private ContextMenuStrip contextMenuStrip1;
+        private FlowLayoutPanel Library;
+        private Button Add;
     }
 }
