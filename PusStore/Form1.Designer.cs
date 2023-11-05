@@ -39,6 +39,8 @@
             contextMenuStrip1 = new ContextMenuStrip(components);
             Library = new FlowLayoutPanel();
             Add = new Button();
+            Run_Button = new Button();
+            Name_game = new Label();
             menuStrip1.SuspendLayout();
             Library.SuspendLayout();
             SuspendLayout();
@@ -143,11 +145,33 @@
             Add.UseVisualStyleBackColor = false;
             Add.Click += Add_Click;
             // 
+            // Run_Button
+            // 
+            Run_Button.Location = new Point(345, 138);
+            Run_Button.Name = "Run_Button";
+            Run_Button.Size = new Size(75, 23);
+            Run_Button.TabIndex = 2;
+            Run_Button.Text = "button1";
+            Run_Button.UseVisualStyleBackColor = true;
+            Run_Button.Click += Run_Button_Click;
+            // 
+            // Name_game
+            // 
+            Name_game.AutoSize = true;
+            Name_game.Location = new Point(161, 105);
+            Name_game.Name = "Name_game";
+            Name_game.Size = new Size(38, 15);
+            Name_game.TabIndex = 3;
+            Name_game.Text = "label1";
+            Name_game.Click += Name_game_Click;
+            // 
             // PusStore
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(Name_game);
+            Controls.Add(Run_Button);
             Controls.Add(Library);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
@@ -157,6 +181,7 @@
             menuStrip1.PerformLayout();
             Library.ResumeLayout(false);
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -171,5 +196,7 @@
         private ContextMenuStrip contextMenuStrip1;
         private FlowLayoutPanel Library;
         private Button Add;
+        private Button Run_Button;
+        private Label Name_game;
     }
 }

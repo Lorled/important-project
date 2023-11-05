@@ -19,8 +19,7 @@ namespace PusStore
 
         private void ExeButton_Click(object sender, EventArgs e)
         {
-            nameLabel.Visible = true;
-            runButton.Visible = true;
+           
         }
         private void настройкиToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -65,7 +64,7 @@ namespace PusStore
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     string filePath = openFileDialog.FileName;
-                    gameName = Path.GetFileNameWithoutExtension(filePath);
+                    gameName = filePath; 
 
                     Icon appIcon = Icon.ExtractAssociatedIcon(filePath);
 
@@ -79,7 +78,7 @@ namespace PusStore
                     exeButton.Click += ExeButton_Click;
 
                     nameLabel = new Label();
-                    nameLabel.Text = gameName;
+                    nameLabel.Text = Path.GetFileName(filePath); // Отображать только имя файла, не полный путь
                     nameLabel.TextAlign = ContentAlignment.MiddleCenter;
                     nameLabel.Dock = DockStyle.Top;
                     nameLabel.Visible = false;
@@ -91,7 +90,6 @@ namespace PusStore
                     runButton.Visible = false;
                     runButton.Click += RunButton_Click;
 
-                    // Размещаем элементы в центре формы
                     int centerX = (Library.Width - exeButton.Width) / 2;
                     int centerY = (Library.Height - exeButton.Height - nameLabel.Height - runButton.Height) / 2;
 
@@ -108,14 +106,13 @@ namespace PusStore
 
         private void RunButton_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(gameName)) // Убедитесь, что gameName не пустое
+            if (!string.IsNullOrEmpty(gameName))
             {
-                string filePath = gameName + ".exe"; // Предполагаем, что исполняемый файл находится в той же директории
-                if (File.Exists(filePath))
+                if (File.Exists(gameName))
                 {
                     try
                     {
-                        System.Diagnostics.Process.Start(filePath); // Запустите исполняемый файл
+                        System.Diagnostics.Process.Start(gameName);
                     }
                     catch (Exception ex)
                     {
@@ -137,5 +134,37 @@ namespace PusStore
         {
             // Добавьте код для отображения дополнительной информации о игре
         }
+
+        private void Name_game_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Run_Button_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(gameName))
+            {
+                if (File.Exists(gameName))
+                {
+                    try
+                    {
+                        System.Diagnostics.Process.Start(gameName);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Ошибка при запуске файла: " + ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Исполняемый файл не найден.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Выберите игру для запуска.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+    
     }
 }

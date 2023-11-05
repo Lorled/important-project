@@ -25,3 +25,30 @@ D:\important-project\PusStore\bin\Debug\net6.0-windows\Octokit.Webhooks.dll
 D:\important-project\PusStore\bin\Debug\net6.0-windows\Octokit.Webhooks.AspNetCore.dll
 D:\important-project\PusStore\bin\Debug\net6.0-windows\System.Reactive.dll
 D:\important-project\PusStore\obj\Debug\net6.0-windows\PusStore.csproj.CopyComplete
+C:\Users\Пользователь\Desktop\Новая папка\important-project\PusStore\bin\Debug\net6.0-windows\PusStore.exe
+C:\Users\Пользователь\Desktop\Новая папка\important-project\PusStore\bin\Debug\net6.0-windows\PusStore.deps.json
+C:\Users\Пользователь\Desktop\Новая папка\important-project\PusStore\bin\Debug\net6.0-windows\PusStore.runtimeconfig.json
+C:\Users\Пользователь\Desktop\Новая папка\important-project\PusStore\bin\Debug\net6.0-windows\PusStore.dll
+C:\Users\Пользователь\Desktop\Новая папка\important-project\PusStore\bin\Debug\net6.0-windows\PusStore.pdb
+C:\Users\Пользователь\Desktop\Новая папка\important-project\PusStore\bin\Debug\net6.0-windows\Macross.Json.Extensions.dll
+C:\Users\Пользователь\Desktop\Новая папка\important-project\PusStore\bin\Debug\net6.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\Пользователь\Desktop\Новая папка\important-project\PusStore\bin\Debug\net6.0-windows\Octokit.dll
+C:\Users\Пользователь\Desktop\Новая папка\important-project\PusStore\bin\Debug\net6.0-windows\Octokit.Reactive.dll
+C:\Users\Пользователь\Desktop\Новая папка\important-project\PusStore\bin\Debug\net6.0-windows\Octokit.Webhooks.dll
+C:\Users\Пользователь\Desktop\Новая папка\important-project\PusStore\bin\Debug\net6.0-windows\Octokit.Webhooks.AspNetCore.dll
+C:\Users\Пользователь\Desktop\Новая папка\important-project\PusStore\bin\Debug\net6.0-windows\System.Reactive.dll
+C:\Users\Пользователь\Desktop\Новая папка\important-project\PusStore\obj\Debug\net6.0-windows\PusStore.csproj.AssemblyReference.cache
+C:\Users\Пользователь\Desktop\Новая папка\important-project\PusStore\obj\Debug\net6.0-windows\PusStore.PusStore.resources
+C:\Users\Пользователь\Desktop\Новая папка\important-project\PusStore\obj\Debug\net6.0-windows\PusStore.Form2.resources
+C:\Users\Пользователь\Desktop\Новая папка\important-project\PusStore\obj\Debug\net6.0-windows\PusStore.Properties.Resources.resources
+C:\Users\Пользователь\Desktop\Новая папка\important-project\PusStore\obj\Debug\net6.0-windows\PusStore.csproj.GenerateResource.cache
+C:\Users\Пользователь\Desktop\Новая папка\important-project\PusStore\obj\Debug\net6.0-windows\PusStore.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Пользователь\Desktop\Новая папка\important-project\PusStore\obj\Debug\net6.0-windows\PusStore.AssemblyInfoInputs.cache
+C:\Users\Пользователь\Desktop\Новая папка\important-project\PusStore\obj\Debug\net6.0-windows\PusStore.AssemblyInfo.cs
+C:\Users\Пользователь\Desktop\Новая папка\important-project\PusStore\obj\Debug\net6.0-windows\PusStore.csproj.CoreCompileInputs.cache
+C:\Users\Пользователь\Desktop\Новая папка\important-project\PusStore\obj\Debug\net6.0-windows\PusStore.csproj.CopyComplete
+C:\Users\Пользователь\Desktop\Новая папка\important-project\PusStore\obj\Debug\net6.0-windows\PusStore.dll
+C:\Users\Пользователь\Desktop\Новая папка\important-project\PusStore\obj\Debug\net6.0-windows\refint\PusStore.dll
+C:\Users\Пользователь\Desktop\Новая папка\important-project\PusStore\obj\Debug\net6.0-windows\PusStore.pdb
+C:\Users\Пользователь\Desktop\Новая папка\important-project\PusStore\obj\Debug\net6.0-windows\PusStore.genruntimeconfig.cache
+C:\Users\Пользователь\Desktop\Новая папка\important-project\PusStore\obj\Debug\net6.0-windows\ref\PusStore.dll
