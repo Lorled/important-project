@@ -147,22 +147,24 @@
             // 
             // Run_Button
             // 
-            Run_Button.Location = new Point(345, 138);
+            Run_Button.Location = new Point(213, 236);
             Run_Button.Name = "Run_Button";
-            Run_Button.Size = new Size(75, 23);
+            Run_Button.Size = new Size(351, 63);
             Run_Button.TabIndex = 2;
             Run_Button.Text = "button1";
             Run_Button.UseVisualStyleBackColor = true;
+            Run_Button.Visible = false;
             Run_Button.Click += Run_Button_Click;
             // 
             // Name_game
             // 
-            Name_game.AutoSize = true;
-            Name_game.Location = new Point(161, 105);
+            Name_game.AutoEllipsis = true;
+            Name_game.Location = new Point(62, 77);
+            Name_game.MaximumSize = new Size(5000, 5000);
             Name_game.Name = "Name_game";
-            Name_game.Size = new Size(38, 15);
+            Name_game.Size = new Size(428, 87);
             Name_game.TabIndex = 3;
-            Name_game.Text = "label1";
+            Name_game.Visible = false;
             Name_game.Click += Name_game_Click;
             // 
             // PusStore
@@ -181,7 +183,6 @@
             menuStrip1.PerformLayout();
             Library.ResumeLayout(false);
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion

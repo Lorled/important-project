@@ -12,14 +12,22 @@ namespace PusStore
             InitializeComponent();
         }
 
-        private Button exeButton;
-        private Label nameLabel;
-        private Button runButton;
+        private Button? exeButton;
         private string gameName;
+        
 
         private void ExeButton_Click(object sender, EventArgs e)
         {
-           
+            Name_game.Visible = true;
+
+            Run_Button.Visible = true;
+            Button clickedButton = (Button)sender;
+            gameName = clickedButton.Tag.ToString();
+
+            
+            Name_game.Text = Path.GetFileName(gameName.Replace(".exe", ""));
+
+
         }
         private void настройкиToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -64,7 +72,7 @@ namespace PusStore
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     string filePath = openFileDialog.FileName;
-                    gameName = filePath; 
+                   
 
                     Icon appIcon = Icon.ExtractAssociatedIcon(filePath);
 
@@ -77,29 +85,16 @@ namespace PusStore
                     exeButton.Margin = new Padding(3, 20, 3, 20);
                     exeButton.Click += ExeButton_Click;
 
-                    nameLabel = new Label();
-                    nameLabel.Text = Path.GetFileName(filePath); // Отображать только имя файла, не полный путь
-                    nameLabel.TextAlign = ContentAlignment.MiddleCenter;
-                    nameLabel.Dock = DockStyle.Top;
-                    nameLabel.Visible = false;
-                    nameLabel.Click += title_Click;
+                    exeButton.Tag = filePath;
 
-                    runButton = new Button();
-                    runButton.Text = "Запустить";
-                    runButton.Size = new Size(80, 30);
-                    runButton.Visible = false;
-                    runButton.Click += RunButton_Click;
 
                     int centerX = (Library.Width - exeButton.Width) / 2;
-                    int centerY = (Library.Height - exeButton.Height - nameLabel.Height - runButton.Height) / 2;
+                    int centerY = (Library.Height - exeButton.Height) / 2;
 
                     exeButton.Location = new Point(centerX, centerY);
-                    nameLabel.Location = new Point(centerX, centerY + exeButton.Height);
-                    runButton.Location = new Point(centerX, centerY + exeButton.Height + nameLabel.Height);
 
                     Library.Controls.Add(exeButton);
-                    Library.Controls.Add(nameLabel);
-                    Library.Controls.Add(runButton);
+
                 }
             }
         }
@@ -165,6 +160,6 @@ namespace PusStore
                 MessageBox.Show("Выберите игру для запуска.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-    
+
     }
 }
