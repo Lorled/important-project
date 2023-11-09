@@ -14,7 +14,7 @@ namespace PusStore
 
         private Button? exeButton;
         private string gameName;
-        
+
 
         private void ExeButton_Click(object sender, EventArgs e)
         {
@@ -24,7 +24,7 @@ namespace PusStore
             Button clickedButton = (Button)sender;
             gameName = clickedButton.Tag.ToString();
 
-            
+
             Name_game.Text = Path.GetFileName(gameName.Replace(".exe", ""));
 
 
@@ -72,7 +72,7 @@ namespace PusStore
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     string filePath = openFileDialog.FileName;
-                   
+
 
                     Icon appIcon = Icon.ExtractAssociatedIcon(filePath);
 
@@ -137,29 +137,29 @@ namespace PusStore
 
         private void Run_Button_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(gameName))
+
+            if (File.Exists(gameName))
             {
-                if (File.Exists(gameName))
+                try
                 {
-                    try
-                    {
-                        System.Diagnostics.Process.Start(gameName);
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Ошибка при запуске файла: " + ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    System.Diagnostics.Process.Start(gameName);
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Исполняемый файл не найден.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Ошибка при запуске файла: " + ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
-                MessageBox.Show("Выберите игру для запуска.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Исполняемый файл не найден.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+
         }
 
+        private void PusStore_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
