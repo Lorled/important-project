@@ -6,10 +6,18 @@ using System.IO;
 namespace PusStore
 {
     public partial class PusStore : Form
-    {
+    { 
+        private void ThemeGenerator()
+        {
+            this.Add.BackgroundImage = Properties.Resources.CCI28072023_0002;
+            this.BackColor = Color.FromArgb(0xFF,0x83,0x00);
+            this.menuStrip1.BackColor = Color.FromArgb(0xFF, 0xBB, 0x73);
+            this.Run_Button.BackColor = Color.FromArgb(0xFF, 0xA2, 0x40);
+        }
         public PusStore()
         {
             InitializeComponent();
+            ThemeGenerator();
         }
 
         private Button? exeButton;
@@ -25,7 +33,7 @@ namespace PusStore
             gameName = clickedButton.Tag.ToString();
 
 
-            Name_game.Text = Path.GetFileName(gameName.Replace(".exe", ""));
+            Name_game.Text = Path.GetFileName(gameName.Split("\\")[^2]);
 
 
         }
