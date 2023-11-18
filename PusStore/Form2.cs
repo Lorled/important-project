@@ -15,9 +15,18 @@ namespace PusStore
 {
     public partial class Form2 : Form
     {
+        private void ThemeGenerator()
+        {
+            this.BackColor = Color.FromArgb(0xFF, 0x83, 0x00);
+            this.textBox1.BackColor = Color.FromArgb(0xFF, 0xBB, 0x73);
+            this.button1.BackColor = Color.FromArgb(0xFF, 0xA2, 0x40);
+            this.button2.BackColor = Color.FromArgb(0xFF, 0xA2, 0x40);
+        }
         public Form2()
         {
             InitializeComponent();
+            ThemeGenerator();
+
         }
 
         private void label1_Click(object sender, EventArgs e)

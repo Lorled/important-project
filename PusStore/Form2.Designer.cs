@@ -84,8 +84,9 @@
             Controls.Add(textBox1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "Form2";
+            ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form2";
+            Text = "Добавление";
             Load += Form2_Load;
             ResumeLayout(false);
             PerformLayout();
