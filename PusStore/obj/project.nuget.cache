@@ -1,17 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "PqPqPx2UEPilkv0nIR+2auYcNBPg8FXeP+kuI7eU4Q3RMXwrvAizSKi+w+V+cVl0aHeWUABx9vwStL7/IrkPtA==",
+  "dgSpecHash": "mTCUOnMVeMs+oiSN0l3Ix4qf9fqbsfcpkDpS+KVdh60JaPvE8sdQi7GP5M0arqEX0XezNyGz2PuXXaO3V0RVLA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Пользователь\\Desktop\\Новая папка\\important-project\\PusStore\\PusStore.csproj",
+  "projectFilePath": "D:\\important-project\\PusStore\\PusStore.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Пользователь\\.nuget\\packages\\macross.json.extensions\\3.0.0\\macross.json.extensions.3.0.0.nupkg.sha512",
-    "C:\\Users\\Пользователь\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
-    "C:\\Users\\Пользователь\\.nuget\\packages\\octokit\\8.0.1\\octokit.8.0.1.nupkg.sha512",
-    "C:\\Users\\Пользователь\\.nuget\\packages\\octokit.reactive\\8.0.1\\octokit.reactive.8.0.1.nupkg.sha512",
-    "C:\\Users\\Пользователь\\.nuget\\packages\\octokit.webhooks\\2.0.3\\octokit.webhooks.2.0.3.nupkg.sha512",
-    "C:\\Users\\Пользователь\\.nuget\\packages\\octokit.webhooks.aspnetcore\\2.0.3\\octokit.webhooks.aspnetcore.2.0.3.nupkg.sha512",
-    "C:\\Users\\Пользователь\\.nuget\\packages\\system.reactive\\6.0.0\\system.reactive.6.0.0.nupkg.sha512",
-    "C:\\Users\\Пользователь\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+    "C:\\Users\\Madte\\.nuget\\packages\\macross.json.extensions\\3.0.0\\macross.json.extensions.3.0.0.nupkg.sha512",
+    "C:\\Users\\Madte\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "C:\\Users\\Madte\\.nuget\\packages\\octokit\\8.0.1\\octokit.8.0.1.nupkg.sha512",
+    "C:\\Users\\Madte\\.nuget\\packages\\octokit.reactive\\8.0.1\\octokit.reactive.8.0.1.nupkg.sha512",
+    "C:\\Users\\Madte\\.nuget\\packages\\octokit.webhooks\\2.0.3\\octokit.webhooks.2.0.3.nupkg.sha512",
+    "C:\\Users\\Madte\\.nuget\\packages\\octokit.webhooks.aspnetcore\\2.0.3\\octokit.webhooks.aspnetcore.2.0.3.nupkg.sha512",
+    "C:\\Users\\Madte\\.nuget\\packages\\system.reactive\\6.0.0\\system.reactive.6.0.0.nupkg.sha512",
+    "C:\\Users\\Madte\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
   ],
   "logs": []
 }
