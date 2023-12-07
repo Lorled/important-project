@@ -8,7 +8,6 @@ public class SoundsManager : MonoBehaviour
     public AudioSource footstepSound;
     public AudioSource oneshotSounds;
     public AudioClip jumpclip;
-    //public AudioClip fallclip; Комментарий от Жени: пока что нам это не нужно + если не использовать засирает консоль предупреждениями
     public void Jump()
     {
         oneshotSounds.PlayOneShot(jumpclip);
@@ -23,9 +22,4 @@ public class SoundsManager : MonoBehaviour
     {
         footstepSound.enabled = false;
     }
-
-    /*public void Fall()
-    {
-        oneshotSounds.PlayOneShot(fallclip);
-    }*/
 }
