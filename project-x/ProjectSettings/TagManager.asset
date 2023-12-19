@@ -4,19 +4,17 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - dialoguePanel
-  - Ground
-  - WayPoints
+  - Ladder
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Cursor
+  - PostProcessing
   - Water
   - UI
-  - Fog
-  - Post Processing
-  - Object
+  - Hands
+  - 
+  - 
   - 
   - 
   - 
