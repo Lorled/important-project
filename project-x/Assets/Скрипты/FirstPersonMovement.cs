@@ -11,34 +11,60 @@ public class FirstPersonMovement : MonoBehaviour
     public float runSpeed = 9;
     public KeyCode runningKey = KeyCode.LeftShift;
 
-    Rigidbody rigidbody;
-    /// <summary> Functions to override movement speed. Will use the last added override. </summary>
+    private Rigidbody rigidbody;
+    private bool isPaused = false;
+
     public List<System.Func<float>> speedOverrides = new List<System.Func<float>>();
 
-
-
-    void Awake()
+    private void Awake()
     {
-        // Get the rigidbody on this.
         rigidbody = GetComponent<Rigidbody>();
     }
 
-    void FixedUpdate()
+    private void Update()
     {
-        // Update IsRunning from input.
+        // Check for pause input (for example, the "Escape" key)
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            TogglePause();
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        // If the game is paused, don't update the movement
+        if (isPaused)
+        {
+            return;
+        }
+
         IsRunning = canRun && Input.GetKey(runningKey);
 
-        // Get targetMovingSpeed.
         float targetMovingSpeed = IsRunning ? runSpeed : speed;
         if (speedOverrides.Count > 0)
         {
             targetMovingSpeed = speedOverrides[speedOverrides.Count - 1]();
         }
 
-        // Get targetVelocity from input.
-        Vector2 targetVelocity =new Vector2( Input.GetAxis("Horizontal") * targetMovingSpeed, Input.GetAxis("Vertical") * targetMovingSpeed);
+        Vector2 targetVelocity = new Vector2(Input.GetAxis("Horizontal") * targetMovingSpeed, Input.GetAxis("Vertical") * targetMovingSpeed);
 
-        // Apply movement.
         rigidbody.velocity = transform.rotation * new Vector3(targetVelocity.x, rigidbody.velocity.y, targetVelocity.y);
+    }
+
+    private void TogglePause()
+    {
+        if (isPaused)
+        {
+            // Resume the game
+            Time.timeScale = 1.0f;
+        }
+        else
+        {
+            // Pause the game
+            Time.timeScale = 0.0f;
+        }
+
+        // Toggle the pause state
+        isPaused = !isPaused;
     }
 }
